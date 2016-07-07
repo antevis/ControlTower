@@ -13,6 +13,13 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		
+				
+		let flight = Flight(type: DomesticAirlineType.American)
+		
+		let lendingInstructions = flight.requestLandingInstructions()
+		
+		print("Runway: \(lendingInstructions.runway), Terminal: \(lendingInstructions.terminal.terminal), Gate: \(lendingInstructions.terminal.gate)")
 	}
 
 	override func didReceiveMemoryWarning() {
